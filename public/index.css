@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+}
+
+.nav-bar {
+    height: 80px;
+    width: 100%;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    transition: all 0.3s;
+}
+
+.nav-bar > div {
+    display: flex;
+}
+
+.nav-buttons {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin: 1rem;
+    border: 3px solid white;
+    outline: none;
+    width: 100px;
+    cursor: pointer;
+    height: 55px;
+}
+
+.wallet-connect {
+    background: #f2db00;
+}
+
+.twitter-connect {
+    background-image: linear-gradient( 315deg, #eec0c6 0%, #7ee8fa 74%);
+}
+
+.discord-connect {
+    background-image: linear-gradient( 315deg, #7f53ac 0%, #647dee 74%);
+}
+
+.nav-bar div, #nav_bar_items {
+    cursor: pointer;
+}
+
+.nav-buttons:hover , #nav_bar_items>li:hover {
+    transform: scale(1.1);
+}
+
+.nav-bar div:active , #nav_bar_items>li:active{
+    color: rgb(148,187,233);
+}
+
+.container {
+    background: transparent;
+    height: 600px;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    background: url(https://images.unsplash.com/photo-1643101810124-748118838131?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80) no-repeat fixed;
+    background-size: 100vw;
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    color: white;
+}
+
+.wallet-address {
+    width: 340px;
+    text-align: end;
+    padding: 0.75rem 0.75rem 0.75rem 7.5rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin: 0 1rem;
+}
+
+.wallet-address-text {
+    position: absolute;
+    left: 6%;
+}
+
+.generate {
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #2cbc63;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white
+}
+
+
+.generate:hover {
+    background: #2cbc63b0;
+}
+
+.generate:active {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: #2cbc63b0;
+}
+
+
+#wallet {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#nft_number {
+    height: 40px;
+    padding: 0 0 0 1rem;
+}
+
+#nav_bar_items {
+    display: flex;
+    width: 40%;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+}
+
+#nav_bar_items > li {
+    padding: 0 1rem;
+    transition: all 0.3s;
+}
+
+.progress-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: fit-content;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 10px;
+    border: 3px solid white;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.progess-container-circle {
+    height: 100px;
+    width: 100px;
+    background: grey;
+    margin: 2rem 0rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    border: 3px solid white;
+    transition: all 0.3s;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+}
+
+.circle-container:before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 80%;
+    background: white;
+    top: 50%;
+    z-index: -1;
+}
+
+.circle-container .updated-progres {
+    position: absolute;
+    height: 4px;
+    width: 0%;
+    transition: all 0.3s;
+    background: blue;
+    top: 50%;
+    left: 10%;
+    z-index: -1;
+}
+
+.successful {
+    background-image: linear-gradient( 315deg, #eec0c6 0%, #7ee8fa 74%);
+    border: 3px solid blue;
+    color: blue;
+}
+
+.un-successful {
+    background: #EA4C46;
+}
+
+.active {
+    z-index: 999;
+    opacity: 1;
+}
+
+#progess-status {
+    padding: 1rem 0;
+    text-align: center;
+    margin: 1rem 0;
+    color: white;
+    font-size: 2rem;
+}
+
+#progess-status > ol {
+    font-size: 20px;
+    text-align: left;
+}
+
+#progess-status li{
+    margin: 4px 0;
+}
+
+.close-modal {
+    height: 35px;
+    width: 80px;
+    color: white;
+    background: #32de84;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem 0;
+    border: 2px solid white;
+}
+
+.disable-close {
+    background: grey;
+    cursor: not-allowed;
+}
+
+.close-modal:hover {
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+}
+
+.logo {
+    height: 90%;
+    width: 50px;
+}
+
+.animate {
+    animation: beat 0.8s infinite linear;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+    0% {
+        transform: scale(1);
+    }
+}
+
+.logo {
+    height: 55px;
+    width: 55px;
+    border-radius: 10px;
+    background: radial-gradient(circle, #76030F 0%, #121B67 100%);
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    font-family: sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo > h3 {
+    margin: 0;
+}
+
+.inactive-wallet {
+    background: rgba(0,0,0,0.1);
+    cursor: not-allowed;
+}
+
+.inactive-wallet:hover {
+    transform: scale(1);
+}
+
+.button {
+    width: 40px;
+    margin: 0 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container > div {
+    margin: 1rem 0;
+}
+
+#number-of-nfts {
+    color: white;
+}

@@ -1,0 +1,43 @@
+doctype html
+html
+    head
+        title Make Your NFT
+        link(href='/index.css' rel="preload" as="style" onload="this.rel='stylesheet'")
+    body
+        div.progress-modal
+            div.circle-container
+                div.updated-progres
+                div.progess-container-circle 1
+                div.progess-container-circle 2
+                div.progess-container-circle 3
+                div.progess-container-circle 4
+            div#progess-status You will see your progress here
+            button.close-modal(onclick="closeProgessModal()") Close
+
+        div.nav-bar
+            ul#nav_bar_items
+                li
+                    div.logo
+                        h3 NFT
+                        span Maker
+            div
+                button#walletButton.nav-buttons.wallet-connect(onclick="onWalletClick()")
+                a(href="https://twitter.com/home", target="_blank")
+                    button.nav-buttons.twitter-connect Twitter
+                a(href="https://discord.com/", target="_blank")
+                    button.nav-buttons.discord-connect Discord
+        div.container
+            div.button-container
+                div(onclick="generateNft()", style="font-size: 1.25rem; padding: 0.25rem").generate Generate
+                div.center
+                    div(onclick="updateValue(-1)")#decreaseValue.button.generate -
+                    div#number-of-nfts 1
+                    div(onclick="updateValue(1)")#increaseValue.button.generate +
+        div#footer.footer
+        script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+        script(src="/socket.io/socket.io.js")
+        script(src='/socket.js')
+        script(src='/index.js')
+        script(src='/modal.js')
+
+            
